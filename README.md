@@ -53,22 +53,22 @@ python main.py \
 
 | Argument            | Description                                                               | Default    |
 | ------------------- | ------------------------------------------------------------------------- | ---------- |
-| `--dataset`         | Dataset to use: `cifar10`, `cifar100`, or `imagenet`                      | *required* |
-| `--data-dir`        | Path to dataset root directory                                            | *required* |
 | `--model`           | Model architecture (`resnet18`, `resnet34`, `resnet50`, `vgg11_bn`, etc.) | *required* |
-| `--prob`            | Dropout probability range (min, max)                                      | *required* |
+| `--dataset`         | Dataset to use: `cifar10`, `cifar100`, or `imagenet`                      | cifar10    |
+| `--data-dir`        | Path to dataset root directory                                            | ./data     |
+| `--prob`            | Dropout probability range (min, max)                                      | [0.2, 1.0] |
 | `--schedule`        | Dropout schedule: `constant`, `cosine`, `linear`                          | constant   |
 | `--total_steps`     | Number of steps for schedule progression                                  | 1/3 epochs |
 | `--batch-size`      | Batch size for training                                                   | 128        |
-| `--test-batch-size` | Batch size for validation/testing                                         | 100        |
+| `--test-batch-size` | Batch size for validation/testing                                         | 128        |
 | `--epochs`          | Total training epochs                                                     | 200        |
 | `--lr`              | Initial learning rate                                                     | 0.1        |
-| `--weight-decay`    | Weight decay for optimizer                                                | 1e-4       |
-| `--before-epochs`   | Epochs before pruning starts                                              | 100        |
-| `--amount`          | Pruning amount (fraction of weights to remove)                            | 0.5        |
-| `--ft-epochs`       | Fine-tuning epochs after pruning                                          | 50         |
-| `--ft-lr`           | Learning rate for fine-tuning                                             | 0.01       |
-| `--seed`            | Random seed for reproducibility                                           | 42         |
+| `--weight-decay`    | Weight decay for optimizer                                                | 1e-3       |
+| `--before-epochs`   | Epochs before pruning starts                                              | 0          |
+| `--amount`          | Pruning amount (fraction of weights to remove)                            | 0.7        |
+| `--ft-epochs`       | Fine-tuning epochs after pruning                                          | 30         |
+| `--ft-lr`           | Learning rate for fine-tuning                                             | 0.02       |
+| `--seed`            | Random seed for reproducibility                                           | 5          |
 
 ## Example
 
